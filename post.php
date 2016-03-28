@@ -62,7 +62,7 @@ class Post {
         $sql = "SELECT * FROM posts ORDER BY id desc LIMIT 5";
 
         foreach ($conn->query($sql) as $post)  {
-            echo '<tr>'.
+            echo '<tr id='.$post['id'].'>'.
                 '<td>'.$post['title'].'</td>'.
                 '<td>'.$post['body'].'</td>'.
                 '<td>'.$post['date'].'</td>'.

@@ -25,6 +25,7 @@
 </head> -->
 <body>
 
+<!--getPostName($_Get['id'])'-->
 
 	<!-- NavBar -->
   	<?php getNavbar();?>
@@ -40,6 +41,7 @@
 	    <div class="col-sm-1" style="background-color:lavender;"></div>
 	    <div class="col-sm-10" style="background-color:lavenderblush;">
 	    	<div class="row">
+				<p>ID: <?php echo $_GET['id'] ?> </p>
 				<p>Title: titletext </p>
 				<p> By: authorname </p>
 				<p> Date: date </p>
