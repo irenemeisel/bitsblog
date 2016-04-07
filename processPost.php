@@ -2,7 +2,7 @@
 	session_start();
 
 	require_once("post.php");
-	require_once ("user.php");
+	require_once("user.php");
 
 
 	//? include user class

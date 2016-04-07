@@ -1,10 +1,12 @@
 <?php
 session_start();
-require_once("database.php");
-require_once("user.php");
-require_once("post.php");
-include("views/pageblocks.php");
 
+include "control/Paths.php";
+$paths = Paths::getInstance();
+require_once($paths->getPathOf("database"));
+require_once($paths->getPathOf("user"));
+require_once($paths->getPathOf("post"));
+require_once($paths->getPathOf("pageblocks"));
 
 getHeader();
 getNavbar();
