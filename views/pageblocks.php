@@ -141,7 +141,7 @@ function getHeader()
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="js/domHandler.js"></script>
-    <link rel="stylesheet" href="../style.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/style.css" type="text/css"/>
     <title>welcome
         <?php
         //print($userRow['userEmail']);
