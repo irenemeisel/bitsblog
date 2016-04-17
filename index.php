@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include "control/Paths.php";
+include_once "control/Paths.php";
 $paths = Paths::getInstance();
 require_once($paths->getPathOf("database"));
 require_once($paths->getPathOf("user"));

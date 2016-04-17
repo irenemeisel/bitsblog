@@ -1,11 +1,11 @@
 <?php
 
-	require_once("session.php");
-	require_once("user.php");
-	
-  $auth_user = new USER();
-	
-	
+    include_once "control/Paths.php";
+    $paths = Paths::getInstance();
+    require_once($paths->getPathOf("session"));
+    require_once($paths->getPathOf("user"));
+
+    $auth_user = new USER();
 	$userId = $_SESSION['user_session'];
 	
 	$stmt = $auth_user->runQuery("SELECT * FROM usersTest WHERE userId=:userId");

@@ -1,8 +1,10 @@
 <?php
 	session_start();
 
-	require_once("post.php");
-	require_once("user.php");
+	include_once "control/Paths.php";
+	$paths = Paths::getInstance();
+	require_once($paths->getPathOf("post"));
+	require_once($paths->getPathOf("user"));
 
 
 	//? include user class

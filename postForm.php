@@ -1,27 +1,27 @@
 <?php
- session_start();
-	require_once("database.php");
-	require_once("user.php");
+    session_start();
 
-  include("views/pageblocks.php");
+    include_once "control/Paths.php";
+    $paths = Paths::getInstance();
+    require_once($paths->getPathOf("database"));
+    require_once($paths->getPathOf("user"));
+    include($paths->getPathOf("pageblocks"));
 
+    if(USER::isLoggedIn()!="true") {
+        USER::redirect('login.php');
+    }
+        echo '<p>'.USER::getName().'</p>';
 
-
-if(USER::isLoggedIn()!="true") {
-	USER::redirect('login.php');
-}
-	echo '<p>'.USER::getName().'</p>';
-
-	getHeader();
-	getNavbar();
-?>
+        getHeader();
+        getNavbar();
+    ?>
 
 <body>
 	<div class="container"> 
 		<h2>Write a new post</h2>
 		<div class="row">
 			<div class="col-md-12">
-				<form name="createPost" action="processPost.php" enctype="multipart/form-data" method="POST">
+				<form name="createPost" action="control/processPost.php" enctype="multipart/form-data" method="POST">
 					<div class="form-group">	
 
 						<p>

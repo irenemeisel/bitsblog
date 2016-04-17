@@ -24,7 +24,9 @@ class Paths
             "database" => "model/",
             "user" => "model/",
             "post" => "model/",
-            "pageblocks" => "views/"
+            "pageblocks" => "views/",
+            "session" => "control/",
+            "login" => ""
             );
     }
 

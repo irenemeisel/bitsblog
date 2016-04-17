@@ -1,6 +1,8 @@
 <?php
 
-require_once('database.php');
+include_once "control/Paths.php";
+$paths = Paths::getInstance();
+require_once($paths->getPathOf("database"));
 //or make User class an extension of database connection class
 //or have User class *implement* database connection class?
 //something about making the database class an interface and not a class

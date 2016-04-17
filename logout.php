@@ -1,6 +1,10 @@
 <?php
-	require_once('session.php');
-	require_once('user.php');
+
+    include_once "control/Paths.php";
+    $paths = Paths::getInstance();
+    require_once($paths->getPathOf("session"));
+    require_once($paths->getPathOf("user"));
+
 	$user_logout = new USER();
 	
 	if($user_logout->isLoggedIn()!="")

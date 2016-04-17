@@ -1,6 +1,9 @@
 <?php
-require_once("database.php");
-require_once("user.php");
+
+include_once "control/Paths.php";
+$paths = Paths::getInstance();
+require_once($paths->getPathOf("database"));
+require_once($paths->getPathOf("user"));
 
 //make sure user is logged in
 //how to automatically create user when use post class???

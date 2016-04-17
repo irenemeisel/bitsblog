@@ -1,6 +1,9 @@
 <?php
 session_start();
-require_once("user.php");
+
+include_once "control/Paths.php";
+$paths = Paths::getInstance();
+require_once($paths->getPathOf("user"));
 
 // $login = new USER();
 

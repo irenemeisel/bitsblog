@@ -1,7 +1,9 @@
 <?php
 
-require_once('database.php');
-require_once('user.php');
+include_once "control/Paths.php";
+$paths = Paths::getInstance();
+require_once($paths->getPathOf("database"));
+require_once($paths->getPathOf("user"));
 
 $user = new USER();
 
@@ -33,4 +35,3 @@ if (isset($_POST['signup'])) {
         }
     }
 }
-?>
