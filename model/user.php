@@ -109,7 +109,7 @@ class User
     public static function getName()
     {
         // return $_SESSION['name'];
-        return 'Not set';
+        return $_SESSION['userName'];
     }
 
     public static function redirect($url)

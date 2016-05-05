@@ -11,6 +11,7 @@ class Paths
 {
     private static $instance;
     private $paths;
+    private $directories;
 
     public static function getInstance() {
         if (!self::$instance) {
@@ -26,8 +27,13 @@ class Paths
             "post" => "model/",
             "pageblocks" => "views/",
             "session" => "control/",
-            "login" => ""
+            "login" => "",
+            "css" => "css/"
             );
+
+        $this->directories = array(
+            "css" => "css"
+        );
     }
 
     public function getPathOf($filename) {

@@ -12,6 +12,7 @@ getHeader();
 getNavbar();
 ?>
 
+
 <body>
 
 <!-- NavBar -->
@@ -22,7 +23,7 @@ getNavbar();
 
         <div class="container">
             <h2>Posts</h2>
-            <table class="table table-striped">
+            <table class="table table-striped table-hover">
                 <thead>
                 <tr>
                     <th>Title</th>
