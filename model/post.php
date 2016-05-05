@@ -60,8 +60,19 @@ class Post
         }
     }
 
+    public static function countPosts()
+    {
+        $conn = Database::dbConnection();
 
-//turned into static function so don't have to instantiate post class
+        $sql = "SELECT COUNT(id) AS total_rows FROM posts";
+        $statement = $conn->prepare($sql);
+        $statement->execute();
+        $result = $statement->fetch(PDO::FETCH_ASSOC);
+        $conn = null;
+        return json_encode($result);
+    }
+
+    //turned into static function so don't have to instantiate post class
     public static function retrievePosts()
     {
         $conn = Database::dbConnection();
@@ -98,24 +109,6 @@ class Post
         }
 
         $conn = null;
-
-    }
-
-
-public static function retrieveMorePosts()
-    {
-        $conn = Database::dbConnection();
-        $sql = "SELECT * FROM posts ORDER BY id desc LIMIT 5";
-
-        foreach ($conn->query($sql) as $post) {
-            echo '<tr id=' . $post['id'] . '>' .
-                '<td>' . $post['title'] . '</td>' .
-                '<td>' . $post['body'] . '</td>' .
-                '<td>' . $post['date'] . '</td>' .
-                '</tr>';
-        }
-        $conn = null;
-
 
     }
 

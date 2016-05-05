@@ -20,7 +20,10 @@ getNavbar();
 
     <!-- Main Body -->
     <div class="container-fluid" style="margin-top:80px;">
-
+        <?php
+            $num = json_decode(Post::countPosts());
+            echo $num;
+        ?>
         <div class="container">
             <h2>Posts</h2>
             <table class="table table-striped table-hover">
