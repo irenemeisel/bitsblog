@@ -7,7 +7,7 @@ require_once($paths->getPathOf("user"));
 
 // $login = new USER();
 
-if(USER::isLoggedIn()!="")
+if(USER::isLoggedIn())
 {
 	USER::redirect('index.php');
 }
